@@ -102,8 +102,7 @@ async function handleJoinEvent(sock, id, participants) {
                     
                     // Send welcome image with caption (custom or default message)
                     await sock.sendMessage(id, {
-                        image: imageBuffer,
-                        caption: finalMessage,
+                        text: finalMessage,
                         mentions: [participantString],
                         ...channelInfo
                     });
